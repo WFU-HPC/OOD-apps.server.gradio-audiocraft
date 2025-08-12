@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+
+# make sure module command is available
+. /usr/share/Modules/init/bash
+
+echo "Starting main script..."
+echo "TTT - $(date)"
+
+set -x
+
+# activate the environment
+module load envs/audiocraft
+
+#export HF_HOME=/deac/csc/classes/csc191/data/projects/project_06/models
+#export HF_HOME=/scratch/${SLURM_JOB_ID}
+export AUDIOCRAFT_CACHE_DIR="<%= audiocraft_path.to_s %>"
+
+# launch the server
+python3 ./app.py --listen="0.0.0.0" --server_port=${port} --share
+#python3 ./app.py --listen="0.0.0.0" --server_port=${port} --username=${USER} --password=${PASSWORD_SHA1}
+
+echo "TTT - $(date)"

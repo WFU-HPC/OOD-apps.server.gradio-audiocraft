@@ -1,0 +1,9 @@
+---
+name: Gradio AudioCraft
+category: Interactive Apps
+subcategory: "06. Machine Learning and LLMs"
+role: batch_connect
+description: |
+  This app will launch a gradio webserver to interact with Meta MusicGen and AudioGen models using AudioCraft.
+tile:
+  sub_caption: ""
