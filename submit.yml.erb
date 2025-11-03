@@ -46,10 +46,6 @@
     slurm_args = [ "--nodes", "#{nodes}", "--ntasks-per-node", "#{ppn}", "--mem", "#{mem}G", "--constraint", "gpu&a100_40&zen3",        "--gres", "gpu:A100_40:#{gpus}" ]
   when "v100_32gb_zen3"
     slurm_args = [ "--nodes", "#{nodes}", "--ntasks-per-node", "#{ppn}", "--mem", "#{mem}G", "--constraint", "gpu&v100_32&zen3",        "--gres", "gpu:V100_32:#{gpus}" ]
-  when "v100_32gb_skylake"
-    slurm_args = [ "--nodes", "#{nodes}", "--ntasks-per-node", "#{ppn}", "--mem", "#{mem}G", "--constraint", "gpu&v100_32&skylake",     "--gres", "gpu:V100_32:#{gpus}" ]
-  when "v100_32gb_cascade"
-    slurm_args = [ "--nodes", "#{nodes}", "--ntasks-per-node", "#{ppn}", "--mem", "#{mem}G", "--constraint", "gpu&v100_32&cascade",     "--gres", "gpu:V100_32:#{gpus}" ]
   when "lowmangrp_lynx"
     slurm_args = [ "--nodes", "#{nodes}", "--ntasks-per-node", "#{ppn}", "--mem", "#{mem}G", "--nodelist", "lynx"                                                       ]
   when "lowmangrp_lascar"

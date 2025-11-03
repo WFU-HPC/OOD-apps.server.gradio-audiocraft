@@ -1,7 +1,7 @@
 # Gradio AudioCraft App for Open OnDemand (OOD)
 
-Wake Forest University (WFU) HPC Team
-Primary Contact: Sean Anderson (anderss@wfu.edu)
+Wake Forest University (WFU) HPC Team<br>
+Primary Contact: Sean Anderson (anderss@wfu.edu)<br>
 `chatbot.py` script created by Cody Stevens
 
 Developed for DEAC OnDemand, the OOD deployment on the DEAC Cluster which is a part of the [WFU HPC Facility](https://hpc.wfu.edu). 
