@@ -94,8 +94,8 @@ Ensure an equivalent module is available on your system.
 ### 4. Verify
 
 No OOD restart is needed (Batch Connect apps are detected automatically).
-Visit your OOD dashboard and look for **Gradio AudioCraft** under
-**Interactive Apps > Machine Learning and LLMs**.
+Visit your OOD dashboard and look for **AudioCraft Appverse** under
+**Appverse Appss**.
 
 ## Configuration
 
@@ -122,11 +122,9 @@ Visit your OOD dashboard and look for **Gradio AudioCraft** under
 
 ## Testing
 
-<!-- TODO: Update with sites where this app has been deployed -->
-
-| Site                          | OOD Version   | Scheduler | Status |
-|-------------------------------|---------------|-----------|--------|
-| Wake Forest University (DEAC) | <!-- TODO --> | Slurm     | <!-- TODO --> |
+| Site                          | OOD Version   | Scheduler | Status   |
+|-------------------------------|---------------|-----------|----------|
+| Wake Forest University (DEAC) | 4.1.1         | Slurm     | Deployed |
 
 ## Known Limitations
 
