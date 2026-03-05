@@ -156,16 +156,21 @@ For bugs or feature requests,
 
 ### Software Installation
 
-Create a Python environment with the required packages. The README from the
-original repo suggests:
+Create a Python environment with the required packages:
 
 ```sh
-python3 -m venv ${HOME}/env-chatbot
-. ${HOME}/env-chatbot/bin/activate
-python3 -m pip install llama_cpp_python gradio openai matplotlib
+python3 -m venv ${HOME}/env-audiocraft
+. ${HOME}/env-audiocraft/bin/activate
+python3 -m pip install -r requirements.txt
 ```
 
-<!-- TODO: Add notes about building the AudioCraft environment module on your compute nodes -->
+Clone the AudioCraft repository and install audiocraft locally.
+
+```sh
+git clone https://github.com/facebookresearch/audiocraft.git
+cd audiocraft/
+pip install -e .
+```
 
 ## License
 
