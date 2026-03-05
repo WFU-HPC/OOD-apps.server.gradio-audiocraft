@@ -68,15 +68,6 @@ cd OOD-apps.server.gradio-audiocraft
 
 ### 2. Set up the AudioCraft environment
 
-Create a Python environment with the required packages. The README from the
-original repo suggests:
-
-```sh
-python3 -m venv ${HOME}/env-chatbot
-. ${HOME}/env-chatbot/bin/activate
-python3 -m pip install llama_cpp_python gradio openai matplotlib
-```
-
 Make this environment available as an environment module (e.g.,
 `envs/audiocraft`), or update `script.sh.erb` to activate it directly.
 
@@ -164,6 +155,15 @@ For bugs or feature requests,
 - [OOD Batch Connect app development docs](https://osc.github.io/ood-documentation/latest/app-development.html)
 
 ### Software Installation
+
+Create a Python environment with the required packages. The README from the
+original repo suggests:
+
+```sh
+python3 -m venv ${HOME}/env-chatbot
+. ${HOME}/env-chatbot/bin/activate
+python3 -m pip install llama_cpp_python gradio openai matplotlib
+```
 
 <!-- TODO: Add notes about building the AudioCraft environment module on your compute nodes -->
 
