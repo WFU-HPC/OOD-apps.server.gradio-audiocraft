@@ -35,11 +35,14 @@ Primary Contact: Sean Anderson (anderss@wfu.edu)
   via the launch form
 - Working directory selector
 - Optional additional environment modules can be loaded at launch time
-- Multiple CPU and GPU node types supported (AMD Zen3/Zen4, Intel Cascade
-  Lake/Skylake, A100, V100)
+- Deploy on both CPU and GPU compute nodes
 - Module loaded at runtime: `envs/audiocraft`
 
 ## Requirements
+
+- Python 3.9+
+- NVIDIA Compute Capable 7.0 GPU (NVIDIA V100) or better.
+- FFmpeg (Optional)
 
 ### Compute Node Software
 
