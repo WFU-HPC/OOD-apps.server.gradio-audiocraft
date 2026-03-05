@@ -154,6 +154,8 @@ For bugs or feature requests,
 
 ### Software Installation
 
+Install FFMPeg
+
 Create a Python environment with the required packages:
 
 ```sh
@@ -168,6 +170,65 @@ Clone the AudioCraft repository and install audiocraft locally.
 git clone https://github.com/facebookresearch/audiocraft.git
 cd audiocraft/
 pip install -e .
+```
+Sample Module Files
+
+AudioCraft Environment
+```
+#%Module
+##
+## Python environment for AudioCraft
+
+proc ModulesHelp { } {
+    puts stderr "\tSets up a Python Environment to deploy AudioCraft applications with Gradio."
+}
+
+module-whatis   "Sets up a Python Environment to deploy AudioCraft applications with Gradio."
+
+module load utils/ffmpeg/7.1 
+
+set environment     "audiocraft"
+set basedir         "/opt/envs"
+
+################################################################################
+################################################################################
+
+source-sh bash "${basedir}/${environment}/bin/activate"
+```
+
+FFmpeg
+```
+#%Module
+##
+
+proc ModulesHelp { } {
+    puts stderr "\tSets up environment for using FFmpeg."
+}
+
+module-whatis   "Sets up environment for using FFmpeg"
+
+set version  "7.1"
+set basedir  "/opt/ffmpeg/$version"
+
+################################################################################
+################################################################################
+
+prepend-path    PATH                $basedir/bin
+prepend-path    MANPATH             $basedir/share/man
+prepend-path    LD_LIBRARY_PATH     $basedir/lib
+prepend-path    LIBRARY_PATH        $basedir/lib
+prepend-path    C_INCLUDE_PATH      $basedir/include
+prepend-path    CPLUS_INCLUDE_PATH  $basedir/include
+prepend-path    INCLUDE             $basedir/include
+prepend-path    PKG_CONFIG_PATH     $basedir/lib/pkgconfig
+
+prepend-path    PATH                $basedir/ext/bin
+prepend-path    LD_LIBRARY_PATH     $basedir/ext/lib
+prepend-path    LIBRARY_PATH        $basedir/ext/lib
+prepend-path    C_INCLUDE_PATH      $basedir/ext/include
+prepend-path    CPLUS_INCLUDE_PATH  $basedir/ext/include
+prepend-path    INCLUDE             $basedir/ext/include
+prepend-path    PKG_CONFIG_PATH     $basedir/ext/lib/pkgconfig
 ```
 
 ## License
